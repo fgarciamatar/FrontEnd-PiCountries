@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .containerFilter {
+    margin: 0em;
+    background-color: black; 
+    height: 53vw;
+  }
+  
+  .containerCard {
+    width: 85%;
+  }
+  .containerFilter h1 {
+    color: white; 
+  }
+
+  @media (max-width: 800px) {
+    .container{
+      display: flex;
+      flex-direction:column-reverse;
+    }
+  }

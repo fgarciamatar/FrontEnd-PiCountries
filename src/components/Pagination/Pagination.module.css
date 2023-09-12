@@ -1,0 +1,99 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.containerBotones {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.6em;
+}
+.containerPage {
+  display: flex;
+  flex-direction: row;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content:space-around;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+}
+  
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0 0.2em;
+  }
+  
+  /* Estilos para los enlaces */
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 0.4em;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .botonActivo {
+    height: 2.2rem;
+    margin: 0.2em;
+    background-color: rgba(255, 255, 255, 0.253);
+    border-radius: 5em;
+    border: 0.1em solid white;
+    &:hover{
+        border-radius: 2em;
+        background-color: #139f75;
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+        transition: background-color 0.2s ease-in-out;
+     }
+}
+
+.botonInactivo {
+  height: 2.2rem;
+  margin: 0.2em;
+  background-color: rgba(255, 255, 255, 0.253);
+  border-radius: 5em;
+  border: 0.1em solid white;
+}
+
+.active {
+  background-color: #ffffffba;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 800px) {
+  .containerBotones {
+    flex-direction: column; /* Cambia a dirección de columna */
+  }
+
+  .containerPage {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+  .pagination {
+    height: auto; /* Cambia la altura automática */
+    
+  }
+
+  ul {
+    flex-direction: column; /* Cambia a dirección de columna */
+    align-items: center; /* Centra los elementos en la columna */
+  }
+
+  a {
+    margin: 0.2em ; /* Agrega espacio entre los enlaces */
+  }
+}

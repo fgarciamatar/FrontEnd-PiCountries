@@ -1,0 +1,65 @@
+.container {
+  margin: 0.2em;
+  width: 12rem;
+  height: 15rem;
+  background-color: rgba(0, 0, 0, 0.606);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  margin-bottom: 2em;
+  border: 0.2em solid white;
+  color: aliceblue;
+  font-family: "Roboto", sans-serif;
+  &:hover {
+    background-color: #139f75;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+    transition: background-color 1s ease-in-out;
+  }
+}
+.container img {
+  width: 100%;
+  height: 50%;
+}
+
+.container p {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: none;
+  &:hover {
+    background-color: #139f7500;
+    
+  }
+
+  .titulo-responsive {
+    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    overflow: hidden;    /* Oculta el texto que no cabe en el contenedor */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) cuando el texto se recorta */
+}
+}
+
+@media (max-width: 800px) {
+ .container{
+  margin: 0.2em;
+  width: 7.2rem;
+  height: 9.4rem;
+ }
+ .container h1 {
+  font-size: 0.8em;
+ }
+ .container p {
+  font-size: 0.5em;
+ }
+ .titulo-responsive {
+  white-space: normal; /* Restablece el comportamiento predeterminado del texto */
+  overflow: visible;  /* Restablece el comportamiento predeterminado del texto */
+  text-overflow: clip; /* Restablece el comportamiento predeterminado del texto */
+}
+
+}

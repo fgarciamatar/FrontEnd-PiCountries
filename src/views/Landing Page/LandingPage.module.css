@@ -1,0 +1,80 @@
+.background {
+    margin: 0;
+    padding: 3%;
+    background-image: url("../../../imagenes/Landing.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    border: solid 4px #139f75;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 85vh;
+}
+
+.container h1 {
+    color: #ffffff;
+    font-size: 2em; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.imagen {
+    box-shadow: 5px 3px 5px rgba(250, 250, 250, 0.774);
+    border-radius: 50%; /* Hacer la imagen redonda */
+    background-color: #ffffff;
+    width: 10rem; /* Cambiado a ancho en lugar de altura */
+    height: 10rem; /* Mantenido el alto */
+    padding: 0em;
+    margin: 0em auto;
+}
+
+.boton {
+    text-decoration: none;
+    width: auto; /* Ancho automático para ajustar al contenido */
+    margin: 1em 0; /* Añadido espacio vertical */
+    padding: 8px 20px; /* Ajustado el padding */
+    font-size: 1.5em; /* Reducido el tamaño para dispositivos móviles */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.774);
+}
+
+.boton:hover {
+    background-color: #139f75;
+    box-shadow: 5px 3px 5px rgba(250, 250, 250, 0.774);
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+
+    .container{
+        height: auto;
+        width: 90%;
+        padding: 19em 0em;
+        margin: 0.6em;
+    }
+
+    .container h1 {
+        font-size:2em; 
+    }
+
+    .imagen {
+        margin: 1em;
+        width: 6rem; 
+        height: 6rem;
+    }
+
+    .boton {
+        font-size: 1.2em; 
+    }
+}

@@ -1,0 +1,28 @@
+.container {
+    padding: 2em ;
+    background-image:url("../../../imagenes/Landing.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+   height: 100vh;
+}
+
+.containerCard {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+   .container{
+    margin: 0;
+   }
+  }
