@@ -11,7 +11,7 @@ export const CREATE_ACTIVITY = "CREATE_ACTIVITY";
 
 export const getCountries = () => { //nos trae todos los paises al estado global
   return async function (dispatch) {
-    const dataCountries = await axios.get("http://localhost:3001/countries");//traemos todos los paises
+    const dataCountries = await axios.get("/countries");//traemos todos los paises
     const paises = dataCountries.data;
     dispatch({ type: GET_COUNTRIES, payload: paises });//returnamos la action type y lo recibido por la peticion
   };
@@ -20,7 +20,7 @@ export const getCountries = () => { //nos trae todos los paises al estado global
 export const getCountry = (idPais) => {
   return async function (dispatch) {
     const dataCountry = await axios.get(
-      `http://localhost:3001/countries/${idPais}`//traemos el pais pasandole por params idPais
+      `/countries/${idPais}`//traemos el pais pasandole por params idPais
     );
     const pais = dataCountry.data; 
     dispatch({ type: GET_COUNTRY, payload: pais }); //returnamos la action type y lo recibido de la peticion
@@ -29,7 +29,7 @@ export const getCountry = (idPais) => {
 
 export function getCountryByName(name) {//recibimos name 
   return async function (dispatch) {
-    let json = await axios.get(`http://localhost:3001/countries?name=${name}`);//traemos el pais por nombre (pasado por query)
+    let json = await axios.get(`/countries?name=${name}`);//traemos el pais por nombre (pasado por query)
     return dispatch({//returnamos la action type y lo recibido de la peticion
       type: "GET_COUNTRY_BY_NAME", 
       payload: json.data,
@@ -39,7 +39,7 @@ export function getCountryByName(name) {//recibimos name
 
 export const getActivities = () => { 
   return async function (dispatch) {
-    const dataActivity = await axios.get(`http://localhost:3001/activities`);//traemos las actividades y las guardamos en dataActivity
+    const dataActivity = await axios.get(`/activities`);//traemos las actividades y las guardamos en dataActivity
 
     const actividad = dataActivity.data;
     dispatch({ type: GET_ACTIVITIES, payload: actividad }); //hacemos dispatch pasandole la action type y las actividades
@@ -51,7 +51,7 @@ export const createActivity = (payload) => {
   return  async (dispatch) => {
     try {
       const response = await axios.post(
-        `http://localhost:3001/activities`,
+        `/activities`,
         payload); //hacemos un post mandandole la nueva actividad
        alert(response.data); //no da la respuesta en un alert
       const activity = response.data;
